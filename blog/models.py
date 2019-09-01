@@ -20,15 +20,17 @@ class Post(models.Model):
 
 ''' мой класс для сущности Spend - расход средств
     поля:
-         category       - категория траты
-         name           - наименование расхода
-         created_date   - дата и время создания
-         amount         - сумма расхода
+         category       - категория траты (Текстовое поле CharField)
+         name           - наименование расхода (Текстовое поле CharField)
+         created_date   - дата создания (Дата DateField)
+         amount         - сумма расхода (Число с плавающей точкой FloatField)
 '''
+
+
 class Spend(models.Model):
     # поля модели
-    category = models.CharField(max_length=100, help_text='Категория')
-    name = models.CharField(max_length=200, help_text='Наименование расхода')
+    category = models.CharField(max_length=100, help_text='Категория', default='')
+    name = models.CharField(max_length=200, help_text='Наименование расхода', default='')
     created_date = models.DateField(default=timezone.localdate)
     amount = models.FloatField(help_text='Сумма', default=0.0)
 

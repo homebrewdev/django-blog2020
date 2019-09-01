@@ -7,7 +7,6 @@ from django.views.generic import ListView
 from django.views.generic import CreateView
 
 
-
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
     return render(request, 'blog/post_list.html', {'posts': posts})
@@ -46,7 +45,13 @@ def spends_view_url(request):
 class ListSpendView(ListView):
     model = Spend
     template_name = 'blog/spends-list.html'
-    #fields = ['category', 'name', 'amount', 'date']
+    # fields = ['category', 'name', 'amount', 'date']
+
+
+class TableSpendView(ListView):
+    model = Spend
+    template_name = 'blog/spends-table.html'
+
 
 class CreateSpendView(CreateView):
     model = Spend

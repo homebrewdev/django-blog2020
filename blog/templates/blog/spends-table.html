@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Список всех расходов</title>
+
+<style>
+.center {
+  margin: 0 auto;
+  width: 800px;
+  background: white;
+  padding: 0px;
+  text-align: center;
+  font-size:16px;
+}
+</style>
+
+</head>
+<body>
+<!-- Шапка -->
+    <p class="center">
+        <a href="http://127.0.0.1:8000">Вернуться на главную страницу</a>
+    </p>
+<!-- Основной вывод списка покупок -->
+<table class="center">
+    <caption class="center">Таблица расходов:</caption>
+  <colgroup>
+    <col span="3" style="background:Khaki">
+    <col style="background-color:LightCyan"><!-- Задаем цвет фона для следующего (одного) столбца таблицы-->
+  </colgroup>
+    <thead>
+        <tr>
+            <th>Дата покупки</th>
+            <th>Категория</th>
+            <th>Наименование товара</th>
+            <th>Сумма в рублях</th>
+        </tr>
+    </thead>
+    {% for spend in object_list %}
+    <tr>
+	    <th>{{ spend.created_date }}</th>
+        <th>{{ spend.category }}</th>
+        <th>{{ spend.name }}</th>
+        <th>{{ spend.amount }}</th>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+<!-- Подвал Footer -->
+<h4 class="center">HomebrewDev (c) Егор Девятов 2019 г.</h4>
+
+</html>

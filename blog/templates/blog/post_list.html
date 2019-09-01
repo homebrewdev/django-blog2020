@@ -5,19 +5,16 @@
 <meta charset="utf-8">
 
 <style>
-
 html, body, h1, form, fieldset, legend, ol, li {
 	margin: 0;
 	padding: 0;
 }
-
 header, nav {
   text-align: center;
   background: white;
   margin: 20px 0;
   padding: 10px;
 }
-
 nav a {
   text-decoration: none;
   background: #333;
@@ -25,15 +22,11 @@ nav a {
   color: white;
   padding: 3px 8px;
 }
-
 .center {
   margin: 0 auto;
-  width: 600px;
   padding: 0px;
   text-align: center;
 }
-
-
 body {
 	background: #ffffff;
 	color: #111111;
@@ -41,19 +34,16 @@ body {
 	padding: 20px;
 	font-size: 16px
 }
-
 form {
 	width: 800px;
 	margin: 0 auto 0 auto;
 }
-
 form fieldset {
 	padding: 26px;
 	border: 1px solid #b4b4b4;
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
 }
-
 form legend {
 	padding: 5px 20px 5px 20px;
 	color: #030303;
@@ -63,7 +53,6 @@ form legend {
 	position: relative;
 	text-align: center;
 }
-
 form ol {
 	list-style: none;
 	margin-bottom: 20px;
@@ -72,47 +61,36 @@ form ol {
 	-webkit-border-radius: 10px;
 	padding: 10px;
 }
-
 form ol, form legend, form fieldset {
 	background-image: -moz-linear-gradient(top, #f7f7f7, #e5e5e5); /* FF3.6 */
 	background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, #e5e5e5),color-stop(1, #f7f7f7)); /* Saf4+, Chrome */
 }
-
 form ol.buttons {
 	overflow: auto;
 }
-
 form ol li label {
 	float: left;
 	width: 140px;
 	font-weight: bold;
-
 }
-
-
 form ol.radio-buttons li {
 	float:left;
 margin-bottom:0;
 width:8px;
 }
-
 form ol.radio-buttons li label {
 	line-height:20px;
     padding-right:20px;
     width:80px;
 }
-
 form ol.radio-buttons li input {
 padding:0;
 width:20px;
 }
-
-
 .settings {
 	list-style: none;
 	position: relative;
 }
-
 .settings p {
 	display: block;
 	margin-bottom: 20px;
@@ -125,7 +103,6 @@ width:20px;
 	position: relative;
 	height: 15px;
 }
-
 .check {
 	display: block;
 	width: 20px;
@@ -139,25 +116,19 @@ width:20px;
 	top: 0px;
 	left: 0px;
 }
-
-
-
 input[type=checkbox] {
 	display: none;
 }
-
 @-webkit-keyframes labelON {
 	0% {
 		top: 0px;
     	left: 0px;
 	}
-
 	100% {
 		top: 0px;
     	left: 14px;
 	}
 }
-
 input[type=checkbox]:checked + label.check {
 	top: 0px;
 	left: 14px;
@@ -168,19 +139,16 @@ input[type=checkbox]:checked + label.check {
   	-webkit-box-shadow: #244766 -1px 0px 3px;
   	-moz-box-shadow: #244766 -1px 0px 3px;
 }
-
 @-webkit-keyframes labelOFF {
 	0% {
 		top: 0px;
     	left: 16px;
 	}
-
 	100% {
 		top: 0px;
     	left: 0px;
 	}
 }
-
 input[type=checkbox] + label.check {
 	top: 0px;
 	left: 0px;
@@ -191,7 +159,6 @@ input[type=checkbox] + label.check {
   	-webkit-box-shadow: #244766 1px 0px 3px;
   	-moz-box-shadow: #244766 1px 0px 3px;
 }
-
 label.info {
 	position: absolute;
 	color: #000;
@@ -200,13 +167,10 @@ label.info {
 	line-height: 15px;
 	width: 200px;
 }
-
-
 form ol.buttons li {
 	float: right;
 	width: 100px;
 }
-
 input[type=submit] {
 	width: 80px;
 	color: #f3f3f3;
@@ -219,7 +183,6 @@ input[type=submit] {
 	box-shadow: #e3e3e3 0px 2px 5px;
 	border: none;
 }
-
 input[type=reset] {
 	width: 80px;
 	color: #f3f3f3;
@@ -231,26 +194,26 @@ input[type=reset] {
 	-moz-box-shadow: #4e4e4e 0px 2px 5px;
 	box-shadow: #e3e3e3 0px 2px 5px;
 	border: none;
-
 }
-
 </style>
 
         <!-- <link rel="stylesheet" href="style.css" type="text/css"> -->
 </head>
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <body>
-    <form id="form-1" method="post">{% csrf_token %}
+    <form id="form-1" method="post">
+        {% csrf_token %}
         <fieldset>
-            <legend class="center">Учет личных расходов</legend>
+            <legend align="center">Учет личных расходов</legend>
             <ol class="center">
             <li><a href="http://127.0.0.1:8000/admin">Перейти в админ-панель</a></li>
             <li><br><a href="http://127.0.0.1:8000/add_spend">Добавить новый расход</a></li>
             <li><br><a href="http://127.0.0.1:8000/spends-list">Вывести список расходов</a></li>
+                <li><br><a href="http://127.0.0.1:8000/spends-table">Вывести таблицу расходов</a></li>
             </ol>
         </fieldset>
         <!-- Подвал Footer -->
-        <p class="center"> HomebrewDev (c) Егор Девятов 2019 г.</p>
+        <p align="center"> HomebrewDev (c) Егор Девятов 2019 г.</p>
     </form>
     </body>
 </html>
