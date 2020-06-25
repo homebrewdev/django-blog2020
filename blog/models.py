@@ -1,3 +1,4 @@
+# coding=utf-8
 from django.conf import settings
 from django.db import models
 from django.utils import timezone
@@ -25,8 +26,6 @@ class Post(models.Model):
          created_date   - дата создания (Дата DateField)
          amount         - сумма расхода (Число с плавающей точкой FloatField)
 '''
-
-
 class Spend(models.Model):
     # поля модели
     category = models.CharField(max_length=100, help_text='Категория', default='')
@@ -43,4 +42,3 @@ class Spend(models.Model):
 
     def __str__(self):
         return self.name
-

@@ -1,0 +1,15 @@
+{
+  "name": "sierra",
+  "homepage": "https://github.com/sierra-library/sierra",
+  "version": "3.2.0",
+  "_release": "3.2.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "3.2.0",
+    "commit": "c02c808eca083355ed73c0bd3fef0390c7f3f206"
+  },
+  "_source": "https://github.com/sierra-library/sierra.git",
+  "_target": "^3.2.0",
+  "_originalSource": "sierra",
+  "_direct": true
+}

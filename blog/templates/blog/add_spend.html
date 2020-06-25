@@ -24,7 +24,7 @@ input:not([type=checkbox]), textarea {
 	-webkit-border-radius: 5px;
 }
 form {
-	width: 800px;
+	width: 75%;
 	margin: 0 auto 0 auto;
 }
 form fieldset {
@@ -78,7 +78,7 @@ width:20px;
 }
 
 input[type=text] {
-    width:  400px;
+    width:  75%;
     height: 15px;
     padding: 5px 10px 5px 10px;
     border:1px solid #999;
@@ -253,18 +253,23 @@ input[type=reset] {
     </ol>
       <!-- Основные поля -->
     <ol>
-      <li><label for="name">Наименование покупки</label></li>
-      <li><input type="text" id="name" name="name" size="40" placeholder="Введите наименование" required/></li>
+        <li><label for="name">Наименование покупки</label></li>
+        <li><input type="text" id="name" name="name" size="40" placeholder="Введите наименование" required/></li>
     </ol>
       <ol>
-      <li><label for="amount">Сумма</label></li>
-      <li><input type="text" id="amount" name="amount" placeholder="Введите сумму в рублях.коп" required pattern="\d+(\.\d{2})?"
+        <li><label for="amount">Сумма</label></li>
+        <li><input type="text" id="amount" name="amount" placeholder="Введите сумму в рублях.коп" required pattern="\d+(\.\d{2})?"
                  title="Формат ввода: [цифры руб].[цифры копеек]"/></li>
     </ol>
       <ol>
-      <li><label for="date">Дата и время покупки</label></li>
-      <li><input type="date" id="date" name="date" value="" required title="Выберите дату покупки"/></li>
+        <li><label for="date">Дата покупки</label></li>
+        <li><input type="date" id="date" name="date" value="" required title="Выберите дату покупки"/></li>
     </ol>
+
+      <ol>
+        <li><label>Примечание</label></li>
+          <li><input type="text" value="" placeholder="Необязательно"/></li>
+      </ol>
 
       <div class="settings">
           <p>
@@ -286,6 +291,7 @@ input[type=reset] {
             -->
       </div>
     <ol class="buttons">
+        <!-- <li><input type="submit" class="button" onclick="showAlert()" value="OK" /></li> -->
         <li><input type="submit" class="button" value="OK" /></li>
         <li><input type="reset" class="button" value="Отмена" /></li>
     </ol>
@@ -301,6 +307,6 @@ input[type=reset] {
 
 </body>
 <!-- Подвал Footer -->
-    <p align="center"> HomebrewDev (c) Егор Девятов 2019 г.</p>
+    <p align="center"> HomebrewDev (c) Егор Девятов 2020 г.</p>
 
 </html>

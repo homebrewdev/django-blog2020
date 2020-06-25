@@ -2,18 +2,30 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Список всех расходов</title>
+    <title>Таблица расходов</title>
 
 <style>
 .center {
-  margin: 0 auto;
-  width: 800px;
-  background: white;
+  margin: auto;
+  width: 1280px;
+  background: gray;
   padding: 0px;
   text-align: center;
   font-size:16px;
 }
+body {
+	background: #ffffff;
+	color: #111111;
+	font-family: Helvetica;
+	padding: 20px;
+	font-size: 16px
+	position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
 </style>
+    <!-- {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'css/style-mac.css' %}" type="text/css"> -->
 
 </head>
 <body>
@@ -23,7 +35,7 @@
     </p>
 <!-- Основной вывод списка покупок -->
 <table class="center">
-    <caption class="center">Таблица расходов:</caption>
+    <caption class="body">Таблица расходов:</caption>
   <colgroup>
     <col span="3" style="background:Khaki">
     <col style="background-color:LightCyan"><!-- Задаем цвет фона для следующего (одного) столбца таблицы-->
@@ -47,6 +59,6 @@
 </table>
 </body>
 <!-- Подвал Footer -->
-<h4 class="center">HomebrewDev (c) Егор Девятов 2019 г.</h4>
+<h4 class="center">HomebrewDev (c) Егор Девятов 2020 г.</h4>
 
 </html>
